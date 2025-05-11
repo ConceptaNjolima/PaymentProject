@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        p {
+            text-align: center;
+            color: green;
+            font-weight: bold;
+        }
+        .payment-details {
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 5px;
+            max-width: 400px;
+            margin: auto;
+        }
+        .payment-details h2 {
+            text-align: center;
+        }
+        .field {
+            margin-bottom: 10px;
+        }
+        .field label {
+            font-weight: bold;
+        }
+        .field span {
+            margin-left: 10px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="payment-details">
+        <h2>Payment Details</h2>
+        <p>Payment was made successfully!</p>
+        <div class="field">
+            <label>Sender's Account Number</label>
+            <span id="payer">{{ payment.payer }}</span>
+        </div>
+        <div class="field">
+            <label>Receiver's Account Number</label>
+            <span id="payee">{{ payment.payee }}</span>
+        </div>
+        <div class="field">
+            <label>Currency (ISO Code)</label>
+            <span id="currency">{{ payment.currency }}</span>
+        </div>
+        <div class="field">
+            <label>Amount:</label>
+            <span id="amount">{{ payment.amount }}</span>
+        </div>
+        <div class="field">
+            <label>Payer Message:</label>
+            <span id="payer-message">{{ payment.payerMessage }}</span>
+        </div>
+        <div class="field">
+            <label>Payment Reference Number:</label>
+            <span id="payment-reference">{{ payment.paymentReference }}</span>
+        </div>
+    </div>
+</body>
+</html>

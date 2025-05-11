@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/styles/initiatePayment.css">
+    <title>Initiate Payment</title>
+</head>
+<body>
+    <form class="payment-form" id="initiate-payment-form" action="/initiatePayment" method="POST">
+        <h2>Initiate Payment</h2>
+        <div class="form-group">
+            <label for="payer">Sender's Account Number</label>
+            <input type="text" id="payer" name="payer" maxlength="10" pattern="\d{10}" required placeholder="Enter 10-digit account number">
+        </div>
+        <div class="form-group">
+            <label for="payee">Receiver's Account Number</label>
+            <input type="text" id="payee" name="payee" maxlength="10" pattern="\d{10}" required placeholder="Enter 10-digit account number">
+        </div>
+        <div class="form-group">
+            <label for="currency">Currency (ISO Code)</label>
+            <input type="text" id="currency" name="currency" maxlength="3" pattern="[A-Z]{3}" required placeholder="e.g., USD">
+        </div>
+        <div class="form-group">
+            <label for="amount">Amount</label>
+            <input type="number" id="amount" name="amount" step="0.01" min="0" required placeholder="Enter amount">
+        </div>
+        <div class="form-group">
+            <label for="payerMessage">Message (Optional)</label>
+            <textarea id="payerMessage" name="payerMessage" maxlength="1000" rows="3" placeholder="Add a message (optional). Maximum 1000 characters"></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Send</button>
+    </form>
+    <!-- <script src="../static/scripts/initiatePayment.js"></script> -->
+</body>
+</html></html>
